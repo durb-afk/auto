@@ -31,7 +31,7 @@ export const GoogleGeminiEffect = ({
       </p>
       <div className="w-full h-[890px] -top-60 md:-top-40  flex items-center justify-center bg-red-transparent absolute ">
         <button className="font-bold bg-white rounded-full md:px-4 md:py-2 px-2 py-1 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
-          <a href="https://cissa.org.au/">CISSA IS LOVE<br/>CISSA is LIFE</a>
+          <a href="https://cissa.org.au/" className="text-lg md:text-xl font-normal pb-4 text-center bg-clip-text  bg-gradient-to-b from-neutral-100 font-extrabold to-neutral-300">I'M FEELING LUCKY</a>
         </button>
         
       </div>
