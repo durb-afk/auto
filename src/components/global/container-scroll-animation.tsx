@@ -35,7 +35,7 @@ export const ContainerScroll = ({
 
   return (
     <div
-      className="h-[80rem] flex items-center justify-center relative p-20"
+      className="h-[90rem] md:h-[90rem] flex items-center justify-center relative p-20"
       ref={containerRef}
     >
       <div
@@ -88,14 +88,15 @@ export const Card = ({
         boxShadow:
           '0 0 #0000004d, 0 9px 20px #0000004a, 0 37px 37px #00000042, 0 84px 50px #00000026, 0 149px 60px #0000000a, 0 233px 65px #00000003',
       }}
-      className="max-w-5xl -mt-12 mx-auto h-[30rem] md:h-[40rem] w-full  p-6 bg-[#222222] rounded-[30px] shadow-2xl"
+      className="max-w-5xl -mt-12 mx-auto h-[25rem] md:h-[30rem] w-[35rem] md:w-[45rem]  p-6 bg-[#222222] rounded-[30px] shadow-2xl"
     >
-      <div className="bg-gray-100 h-full w-full rounded-2xl  gap-4 overflow-hidden p-4 transition-all ">
+      <div className=" h-full w-full  overflow-hidden rounded-2xl bg-gray-100 dark:bg-zinc-900 md:rounded-2x1 md:p-4 ">
         <Image
-          src="/temp-banner.png"
-          fill
+          src="/temp-bannerig.png"
+          height={800}
+          width={2000}
           alt="bannerImage"
-          className="object-cover border-8 rounded-2xl"
+          className="mx-auto rounded-2xl object-cover h-full object-center"
         />
       </div>
     </motion.div>
