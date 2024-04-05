@@ -8,14 +8,14 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
-import { menuOptions } from '@/lib/constants'
 import clsx from 'clsx'
 import { Separator } from '@/components/ui/separator'
-import { BarChart3, Database, GitBranch, LucideMousePointerClick, MousePointer, Warehouse } from 'lucide-react'
 import { ModeToggle } from '../global/mode-toggle'
 import Image from 'next/image'
 import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
 import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
+import SettingsInputComponentOutlinedIcon from '@mui/icons-material/SettingsInputComponentOutlined';
 
 type Props = {}
 
@@ -47,6 +47,7 @@ const Sidebar = (props: Props) => {
       <div className="flex items-center justify-center flex-col gap-8">
         <TooltipProvider>
             <ul>
+              {/* Dashboard */}
               <Tooltip>
                 <TooltipTrigger>
                   <li>
@@ -60,9 +61,6 @@ const Sidebar = (props: Props) => {
                         }
                       )}
                     >
-                      {/* <menuItem.Component
-                        selected={pathName === menuItem.href}
-                      /> */}
                       <DashboardRoundedIcon />
                     </Link>
                   </li>
@@ -74,7 +72,7 @@ const Sidebar = (props: Props) => {
                   <p>Dashboard</p>
                 </TooltipContent>
               </Tooltip>
-                
+                {/* Settings */}
               <Tooltip>
                 <TooltipTrigger>
                   <li className="pt-4">
@@ -99,6 +97,57 @@ const Sidebar = (props: Props) => {
                   <p>Settings</p>
                 </TooltipContent>
               </Tooltip>
+                {/* workflows */}
+              <Tooltip>
+                <TooltipTrigger>
+                  <li className="pt-4">
+                    <Link
+                       href='/workflow'
+                      className={clsx(
+                        'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
+                        {
+                          'dark:bg-[#2F006B] bg-[#EEE0FF] ':
+                            pathName === '/workflow',
+                        }
+                      )}
+                    >
+                      <DatasetLinkedOutlinedIcon />
+                    </Link>
+                  </li>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <p>Workflows</p>
+                </TooltipContent>
+              </Tooltip>
+              {/* connections */}
+              <Tooltip>
+                <TooltipTrigger>
+                  <li className="pt-4">
+                    <Link
+                       href='/connections'
+                      className={clsx(
+                        'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
+                        {
+                          'dark:bg-[#2F006B] bg-[#EEE0FF] ':
+                            pathName === '/connections',
+                        }
+                      )}
+                    >
+                      <SettingsInputComponentOutlinedIcon />
+                    </Link>
+                  </li>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <p>Connections</p>
+                </TooltipContent>
+              </Tooltip>
+
             </ul>
         </TooltipProvider>
         <Separator />
