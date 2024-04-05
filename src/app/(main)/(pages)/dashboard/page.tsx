@@ -21,6 +21,7 @@ import { Label } from "@/components/ui/label"
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group"
 import { DataTable } from '@/app/notes/data-table';
 import DemoPage from '@/app/notes/page';
+import { Checkbox } from "@/components/ui/checkbox"
 
 
 const DashboardPage = () => {
@@ -33,7 +34,7 @@ const DashboardPage = () => {
         Dashboard
       </h1>
       <div className="flex w-screen pl-20 gap-20">
-        <div className="border grow-0 rounded-md w-60">
+        <div className="border grow-0 shrink-0 rounded-md w-60">
           <Command>
             <CommandInput placeholder="Type a command or search..." />
             <CommandList>
@@ -46,7 +47,7 @@ const DashboardPage = () => {
             </CommandList>
           </Command>
         </div>
-        <div className="grow-0">
+        <div className="grow-0 shrink-0">
           <Calendar
             mode="single"
             selected={date}
@@ -54,81 +55,67 @@ const DashboardPage = () => {
             className="rounded-md border"
           />
         </div>
-        <div className = "flex border rounded-md p-4 grow-0">
-          <div className="pr-5">
-            <RadioGroup defaultValue="option-one">
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-one" id="option-one" />
-                <Label htmlFor="option-one">Task One</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Two</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-three" id="option-three" />
-                <Label htmlFor="option-three">Task Three</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-four" id="option-four" />
-                <Label htmlFor="option-four">Task Four</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-five" id="option-five" />
-                <Label htmlFor="option-five">Task Five</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Six</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Seven</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Eight</Label>
-              </div>
-            </RadioGroup>
+        <div className = "flex-col border rounded-md p-4 grow-0 shrink-0 w-60">
+          
+          <div className="flex gap-1.5 leading-none pt-3">
+            <Checkbox id="terms1" />
+            <label
+              htmlFor="terms1"
+              className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Task 1
+            </label>
+          
           </div>
-          <div className="pl-5">
-            <RadioGroup defaultValue="option-one">
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-one" id="option-one" />
-                <Label htmlFor="option-one">Task One</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Two</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Three</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Four</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-one" id="option-one" />
-                <Label htmlFor="option-one">Task Five</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Six</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Seven</Label>
-              </div>
-              <div className="flex items-center space-x-2 pt-2">
-                <RadioGroupItem value="option-two" id="option-two" />
-                <Label htmlFor="option-two">Task Eight</Label>
-              </div>
-            </RadioGroup>
+          
+          <div className="flex gap-1.5 leading-none pt-3">
+            <Checkbox id="terms2" />
+            <label
+              htmlFor="terms2"
+              className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Task 2
+            </label>
+          
           </div>
+          
+          <div className="flex gap-1.5 leading-none pt-3">
+            <Checkbox id="terms3" />
+            <label
+              htmlFor="terms3"
+              className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Task 3
+            </label>
+          
+          </div>
+          
+          <div className="flex gap-1.5 leading-none pt-3">
+            <Checkbox id="terms4" />
+            <label
+              htmlFor="terms4"
+              className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Task 4
+            </label>
+          
+          </div>
+          
+          <div className="flex gap-1.5 leading-none pt-3">
+            <Checkbox id="terms5" />
+            <label
+              htmlFor="terms5"
+              className="leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+            >
+              Task 5
+            </label>
+          
+          </div>
+          
         </div>
-        
+          <div className="grow-0 shrink-0">
+            <DemoPage />
+          </div>
         </div>
       </div>
     </Layout>
