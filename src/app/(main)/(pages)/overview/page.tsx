@@ -68,7 +68,7 @@ function Overview({ }: Props) {
             </WavyBackground>
 
             <InfiniteMovingCards
-                className="md:mt-[-10rem] mt-[-100px] bg-gray-900"
+                className="md:mt-[-8rem] mt-[-100px] bg-gray-900"
                 items={clients}
                 direction="right"
                 speed="slow"
