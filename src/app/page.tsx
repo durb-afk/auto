@@ -10,8 +10,10 @@ import { CardContainer } from "@/components/global/3d-card";
 import { CardItem } from "@/components/global/3d-card";
 import { CardBody } from "@/components/global/3d-card";
 import { CheckIcon } from "lucide-react";
+import { useEffect } from "react";
 
 export default function Home() {
+
   return (
     <main>
       <Navbar/>
