@@ -2,14 +2,13 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
-import { WavyBackground } from "@/components/ui/wavy-background";
+import { HoverEffect } from "@/components/ui/card-hover-effect";
 import { InfiniteMovingCards } from "@/components/global/infinite-moving-cards";
 import { clients } from "@/lib/constants";
 
-
 type Props = {}
 
-function Overview({ }: Props) {
+function Features({ }: Props) {
     return (
         <div>
             <header className="fixed right-0 left-0 top-0 py-4 px-4 bg-transparent backdrop-blur-lg z-[100] flex items-center border-b-1px border-neutral-900 justify-between">
@@ -58,24 +57,59 @@ function Overview({ }: Props) {
                 </aside>
             </header>
 
-            <WavyBackground className="max-w-4xl mx-auto pb-40">
-                <p className="text-2xl md:text-4xl lg:text-7xl font-bold inter-var text-center">
-                    The Future of Task Automation
-                </p>
-                <p className="text-base md:text-lg mt-4 font-normal inter-var text-center">
-                    Welcome to Autom8—your ultimate tool for simplifying life through automation. Connect effortlessly with Google Drive, Slack, Discord, and Notion for seamless task management. With our intuitive drag-and-drop builder and customizable triggers, creating automation flows has never been easier. Featuring a sleek interface with light and dark modes, Autom8 combines functionality with style. Dive into a smarter way of managing your daily tasks and unlock a new level of productivity with Auto-m8.
-                </p>
-            </WavyBackground>
+            <div className="flex flex-col items-center justify-center">
+                <div className="max-w-5xl mx-auto mt-10">
+                    <HoverEffect items={projects} />
+                </div>
 
-            <InfiniteMovingCards
-                className="md:mt-[-8rem] mt-[-100px] bg-gray-900"
-                items={clients}
-                direction="right"
-                speed="slow"
-            />
+                <InfiniteMovingCards
+                    className="md:mt-[-2rem] mt-[-50px] bg-gray-900"
+                    items={clients}
+                    direction="right"
+                    speed="slow"
+                />
+            </div>
         </div>
-
     )
 }
 
-export default Overview
+export const projects = [
+    {
+        title: "Stripe",
+        description:
+            "A technology company that builds economic infrastructure for the internet.",
+        link: "https://stripe.com",
+    },
+    {
+        title: "Netflix",
+        description:
+            "A streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.",
+        link: "https://netflix.com",
+    },
+    {
+        title: "Google",
+        description:
+            "A multinational technology company that specializes in Internet-related services and products.",
+        link: "https://google.com",
+    },
+    {
+        title: "Meta",
+        description:
+            "A technology company that focuses on building products that advance Facebook's mission of bringing the world closer together.",
+        link: "https://meta.com",
+    },
+    {
+        title: "Amazon",
+        description:
+            "A multinational technology company focusing on e-commerce, cloud computing, digital streaming, and artificial intelligence.",
+        link: "https://amazon.com",
+    },
+    {
+        title: "Microsoft",
+        description:
+            "A multinational technology company that develops, manufactures, licenses, supports, and sells computer software, consumer electronics, personal computers, and related services.",
+        link: "https://microsoft.com",
+    },
+];
+
+export default Features
