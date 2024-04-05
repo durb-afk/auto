@@ -4,7 +4,7 @@ import "./globals.css";
 import { ThemeProvider } from "@/provider/theme-provider";
 
 const font = Roboto({
-  weight: ["900"],
+  weight: ["700"],
   style: "normal",
   subsets: ["latin", "latin-ext"],
 });
