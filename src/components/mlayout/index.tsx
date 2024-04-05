@@ -15,7 +15,7 @@ const Layout: React.FC<Props> = ({
     showInfoBar = true, // true by default
 }) => {
     return (
-        <div className={`flex ${showSidebar || showInfoBar ? 'overflow-hidden' : ''} h-screen`}>
+        <div className={`flex ${showSidebar || showInfoBar ? 'overflow-hidden' : ''} h-screen pr-40`}>
             {showSidebar && <Sidebar />}
             <div className={`w-full ${showInfoBar ? '' : 'flex-1'}`}>
                 {showInfoBar && <InfoBar />}
