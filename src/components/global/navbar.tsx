@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
+import { ModeToggle } from "./mode-toggle";
 
 type Props = {};
 
@@ -18,10 +19,11 @@ const Navbar = async (props: Props) => {
                     className="shadow-sm ml-[-5px]"
                 />
             </aside>
+            
             <nav className="absolute left-[50%] top-[50%] transform translate-x-[-50%] translate-y-[-50%] hidden md:block">
                 <ul className="flex items-center gap-20 list-none text-lg">
                     <li>
-                        <Link href="#">Overview</Link>
+                        <Link href="/overview">Overview</Link>
                     </li>
                     <li>
                         <Link href="#">Features</Link>
@@ -42,6 +44,7 @@ const Navbar = async (props: Props) => {
                     </span>
                 </Link>
                 <MenuIcon className="md: hidden" />
+                
             </aside>
         </header>
     );
