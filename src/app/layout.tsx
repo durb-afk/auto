@@ -6,8 +6,8 @@ import { ThemeProvider } from "@/provider/theme-provider";
 const font = DM_Sans({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Auzzie app",
-  description: "Automated by using automation technologies.",
+  title: "Auto-m8",
+  description: "Connect your workflows",
 };
 
 export default function RootLayout({
