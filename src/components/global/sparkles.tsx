@@ -2,7 +2,7 @@
 import type { NextPage } from 'next'
 import React from 'react'
 import { useEffect, useState } from 'react'
-import Particles, { initParticlesEngine } from '@tsparticles/react/dist/index'
+import Particles, { initParticlesEngine } from '@tsparticles/react'
 import type { Container, Engine } from '@tsparticles/engine'
 import { loadSlim } from '@tsparticles/slim'
 
