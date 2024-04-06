@@ -54,7 +54,7 @@ function Logs({}: Props) {
         </aside>
       </header>
       <div className="pt-24 mx-32 justify-center">
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.2.3</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -64,7 +64,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.2.2</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -74,7 +74,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.2.1</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -84,7 +84,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.2.0</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -94,7 +94,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.1.5</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -104,7 +104,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.1.4</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -114,7 +114,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.1.3</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -124,7 +124,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.1.2</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -134,7 +134,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] rounded-xl">
           <h2>v1.1.1</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
@@ -144,7 +144,7 @@ function Logs({}: Props) {
           </p>
         </div>
         <Separator />
-        <div className="pl-4 pt-6 pb-6 hover:bg-[#111111] rounded-xl">
+        <div className="pl-4 pt-6 pb-6 dark:hover:bg-[#111111] cursor-pointer hover:bg-[#5b5b5b] rounded-xl">
           <h2>v1.1.0</h2>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Maiores eos
