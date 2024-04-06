@@ -30,7 +30,7 @@ export async function POST(req: NextRequest) {
         },
       })
       if (workflow) {
-        workflow.map(async (flow) => {
+        workflow.map(async (flow: { flowPath: string; userId: any; discordTemplate: string; slackChannels: any[]; slackAccessToken: string; slackTemplate: string; notionDbId: string; notionAccessToken: string; notionTemplate: string; id: any }) => {
           const flowPath = JSON.parse(flow.flowPath!)
           let current = 0
           while (current < flowPath.length) {
@@ -52,7 +52,7 @@ export async function POST(req: NextRequest) {
               }
             }
             if (flowPath[current] == 'Slack') {
-              const channels = flow.slackChannels.map((channel) => {
+              const channels = flow.slackChannels.map((channel: any) => {
                 return {
                   label: '',
                   value: channel,

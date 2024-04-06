@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { DM_Sans } from "next/font/google";
+import { Roboto } from "next/font/google";
 import "./globals.css";
 import { ThemeProvider } from "@/provider/theme-provider";
 import { ClerkProvider } from '@clerk/nextjs'
@@ -8,11 +8,15 @@ import { Toaster } from '@/components/ui/sonner'
 import { BillingProvider } from '@/provider/billing-provider'
 import { useEffect } from "react";
 
-const font = DM_Sans({ subsets: ["latin"] });
+const font = Roboto({
+  weight: ["700"],
+  style: "normal",
+  subsets: ["latin", "latin-ext"],
+});
 
 export const metadata: Metadata = {
-  title: "Auzzie app",
-  description: "Automated by using automation technologies.",
+  title: "Auto-m8",
+  description: "Automate Automation by auto-m8.",
 };
 
 export default function RootLayout({

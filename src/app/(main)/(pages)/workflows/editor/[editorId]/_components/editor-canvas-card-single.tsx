@@ -32,6 +32,7 @@ const EditorCanvasCardSingle = ({ data }: { data: EditorCanvasCardType }) => {
           style={{ zIndex: 100 }}
         />
       )}
+      <div className="item-center">
       <Card
         onClick={(e) => {
           e.stopPropagation()
@@ -48,23 +49,7 @@ const EditorCanvasCardSingle = ({ data }: { data: EditorCanvasCardType }) => {
       >
         <CardHeader className="flex flex-row items-center gap-4">
           <div>{logo}</div>
-          <div>
-            <CardTitle className="text-md">{data.title}</CardTitle>
-            <CardDescription>
-              <p className="text-xs text-muted-foreground/50">
-                <b className="text-muted-foreground/80">ID: </b>
-                {nodeId}
-              </p>
-              <p>{data.description}</p>
-            </CardDescription>
-          </div>
         </CardHeader>
-        <Badge
-          variant="secondary"
-          className="absolute right-2 top-2"
-        >
-          {data.type}
-        </Badge>
         <div
           className={clsx('absolute left-3 top-4 h-2 w-2 rounded-full', {
             'bg-green-500': Math.random() < 0.6,
@@ -78,6 +63,12 @@ const EditorCanvasCardSingle = ({ data }: { data: EditorCanvasCardType }) => {
         position={Position.Bottom}
         id="a"
       />
+      <Badge
+          variant="secondary"
+          className="absolute item-center left-10 top-1 ml-2 mb-1"
+        >
+          {data.type}
+        </Badge></div>
     </>
   )
 }

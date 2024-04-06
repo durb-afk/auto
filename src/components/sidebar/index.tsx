@@ -10,9 +10,14 @@ import {
 } from '@/components/ui/tooltip'
 import { menuOptions } from '@/lib/constants'
 import clsx from 'clsx'
+import Image from 'next/image'
 import { Separator } from '@/components/ui/separator'
 import { Database, GitBranch, LucideMousePointerClick } from 'lucide-react'
 import { ModeToggle } from '../global/mode-toggle'
+import DashboardRoundedIcon from '@mui/icons-material/DashboardRounded';
+import SettingsRoundedIcon from '@mui/icons-material/SettingsRounded';
+import DatasetLinkedOutlinedIcon from '@mui/icons-material/DatasetLinkedOutlined';
+import SettingsInputComponentOutlinedIcon from '@mui/icons-material/SettingsInputComponentOutlined';
 
 type Props = {}
 
@@ -20,33 +25,45 @@ const MenuOptions = (props: Props) => {
   const pathName = usePathname()
 
   return (
-    <nav className=" dark:bg-black h-screen overflow-scroll  justify-between flex items-center flex-col  gap-10 py-6 px-2">
-      <div className="flex items-center justify-center flex-col gap-8">
+    <div>
+      <div className="dark:bg-black bg-white w-40 pt-4 pl-4 pb-2">
         <Link
           className="flex font-bold flex-row "
           href="/"
         >
-          fuzzie.
+          <aside className="flex items-center gap-[2px]">
+                <p className="text-3xl font-bold">Auto-m</p>
+                <Image
+                    src="/autom8Logo.png"
+                    width={25}
+                    height={25}
+                    alt="autom8 logo"
+                    className="shadow-sm ml-[-5px]"
+                />
+            </aside>
         </Link>
+      </div>
+      
+    <nav className=" dark:bg-black h-screen overflow-scroll  justify-between flex items-center flex-col  gap-10 py-6 px-2 w-12">
+      
+      <div className="flex items-center justify-center flex-col gap-8">
         <TooltipProvider>
-          {menuOptions.map((menuItem) => (
-            <ul key={menuItem.name}>
-              <Tooltip delayDuration={0}>
+            <ul>
+              {/* Dashboard */}
+              <Tooltip>
                 <TooltipTrigger>
                   <li>
                     <Link
-                      href={menuItem.href}
+                       href='/dashboard'
                       className={clsx(
                         'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
                         {
                           'dark:bg-[#2F006B] bg-[#EEE0FF] ':
-                            pathName === menuItem.href,
+                            pathName === '/dashboard',
                         }
                       )}
                     >
-                      <menuItem.Component
-                        selected={pathName === menuItem.href}
-                      />
+                      <DashboardRoundedIcon />
                     </Link>
                   </li>
                 </TooltipTrigger>
@@ -54,47 +71,94 @@ const MenuOptions = (props: Props) => {
                   side="right"
                   className="bg-black/10 backdrop-blur-xl"
                 >
-                  <p>{menuItem.name}</p>
+                  <p>Dashboard</p>
                 </TooltipContent>
               </Tooltip>
+                {/* Settings */}
+              <Tooltip>
+                <TooltipTrigger>
+                  <li className="pt-4">
+                    <Link
+                       href='/settings'
+                      className={clsx(
+                        'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
+                        {
+                          'dark:bg-[#2F006B] bg-[#EEE0FF] ':
+                            pathName === '/settings',
+                        }
+                      )}
+                    >
+                      <SettingsRoundedIcon />
+                    </Link>
+                  </li>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <p>Settings</p>
+                </TooltipContent>
+              </Tooltip>
+                {/* workflows */}
+              <Tooltip>
+                <TooltipTrigger>
+                  <li className="pt-4">
+                    <Link
+                       href='/workflows'
+                      className={clsx(
+                        'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
+                        {
+                          'dark:bg-[#2F006B] bg-[#EEE0FF] ':
+                            pathName === '/workflow',
+                        }
+                      )}
+                    >
+                      <DatasetLinkedOutlinedIcon />
+                    </Link>
+                  </li>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <p>Workflows</p>
+                </TooltipContent>
+              </Tooltip>
+              {/* connections */}
+              <Tooltip>
+                <TooltipTrigger>
+                  <li className="pt-4">
+                    <Link
+                       href='/connections'
+                      className={clsx(
+                        'group h-8 w-8 flex items-center justify-center  scale-[1.5] rounded-lg p-[3px]  cursor-pointer',
+                        {
+                          'dark:bg-[#2F006B] bg-[#EEE0FF] ':
+                            pathName === '/connections',
+                        }
+                      )}
+                    >
+                      <SettingsInputComponentOutlinedIcon />
+                    </Link>
+                  </li>
+                </TooltipTrigger>
+                <TooltipContent
+                  side="right"
+                  className="bg-black/10 backdrop-blur-xl"
+                >
+                  <p>Connections</p>
+                </TooltipContent>
+              </Tooltip>
+
             </ul>
-          ))}
         </TooltipProvider>
         <Separator />
-        <div className="flex items-center flex-col gap-9 dark:bg-[#353346]/30 py-4 px-2 rounded-full h-56 overflow-scroll border-[1px]">
-          <div className="relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[2px] border-[1px] dark:border-t-[#353346]">
-            <LucideMousePointerClick
-              className="dark:text-white"
-              size={18}
-            />
-            <div className="border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform translate-x-[-50%] -bottom-[30px]" />
-          </div>
-          <div className="relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[2px] border-[1px] dark:border-t-[#353346]">
-            <GitBranch
-              className="text-muted-foreground"
-              size={18}
-            />
-            <div className="border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform translate-x-[-50%] -bottom-[30px]"></div>
-          </div>
-          <div className="relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[2px] border-[1px] dark:border-t-[#353346]">
-            <Database
-              className="text-muted-foreground"
-              size={18}
-            />
-            <div className="border-l-2 border-muted-foreground/50 h-6 absolute left-1/2 transform translate-x-[-50%] -bottom-[30px]"></div>
-          </div>
-          <div className="relative dark:bg-[#353346]/70 p-2 rounded-full dark:border-t-[2px] border-[1px] dark:border-t-[#353346]">
-            <GitBranch
-              className="text-muted-foreground"
-              size={18}
-            />
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-center flex-col gap-8">
+       </div> 
+      <div className="flex items-center justify-center flex-col gap-8 pb-20">
         <ModeToggle />
       </div>
     </nav>
+    </div>
   )
 }
 

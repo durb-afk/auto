@@ -77,7 +77,7 @@ const EditorCanvasSidebar = ({ nodes }: Props) => {
               <Card
                 key={cardKey}
                 draggable
-                className="w-full cursor-grab border-black bg-neutral-100 dark:border-neutral-700 dark:bg-neutral-900"
+                className="w-full cursor-grab border-black bg-neutral-100 dark:border-neutral-100 dark:bg-card"
                 onDragStart={(event) =>
                   onDragStart(event, cardKey as EditorCanvasTypes)
                 }
