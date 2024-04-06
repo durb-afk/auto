@@ -2,6 +2,7 @@ import React from "react";
 import Image from "next/image";
 import Link from "next/link";
 import { MenuIcon } from "lucide-react";
+import { BackgroundGradientAnimationDemo } from "@/components/global/gradient-animation";
 
 type Props = {}
 
@@ -51,8 +52,9 @@ function Pricing({ }: Props) {
                 <MenuIcon className="md: hidden" />
 
             </aside>
+        <body>
+        <BackgroundGradientAnimationDemo /></body>
         </header>
-
     )
 }
 
