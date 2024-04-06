@@ -11,6 +11,7 @@ import {
   TooltipProvider,
   TooltipTrigger,
 } from '@/components/ui/tooltip'
+import useSpeechRecognitionHook from '@/hooks/useSpeechRecognitionHook'
 //import { UserButton } from '@clerk/nextjs'
 //import { useBilling } from '@/providers/billing-provider'
 //import { onPaymentDetails } from '@/app/(main)/(pages)/billing/_actions/payment-connecetions'
@@ -18,6 +19,15 @@ import {
 type Props = {}
 
 const InfoBar = (props: Props) => {
+  
+  const {
+    text,
+    startListening,
+    stopListening,
+    isListening,
+    hasRecognitionSupport,
+  } = useSpeechRecognitionHook();
+
 //   const { credits, tier, setCredits, setTier } = useBilling()
 
 //   const onGetPayment = async () => {
@@ -44,6 +54,21 @@ const InfoBar = (props: Props) => {
           </span>
         )}
       </span> */}
+      
+      {hasRecognitionSupport ? (
+        <>
+
+          {isListening ? <div>Your browser is listening</div>:null}
+          {text}
+        <div className='rounded-xl px-2 py-2 bg-gray-800'>
+          <button onClick={startListening}>Start Listening</button>
+        </div>
+        </>
+      ):(
+        <h1>Browser has no support</h1>
+      )
+
+      }
       <span className="flex items-center rounded-full bg-muted px-4">
         <Search />
         <Input

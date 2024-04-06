@@ -2,6 +2,8 @@ import Navbar from "@/components/global/navbar";
 import { LampComponent } from "@/components/global/lamp";
 import { GoogleGeminiEffectDemo } from "@/components/global/google-effect";
 import { MeteorsDemo } from "@/components/global/meteor";
+
+
 export default function Home() {
   return (
     <main>
