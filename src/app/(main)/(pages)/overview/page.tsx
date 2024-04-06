@@ -58,7 +58,7 @@ function Overview({ }: Props) {
                 </aside>
             </header>
 
-            <WavyBackground className="max-w-4xl mx-auto pb-40">
+            <WavyBackground className="max-w-4xl mx-auto pb-24">
                 <p className="text-2xl md:text-4xl lg:text-7xl font-bold inter-var text-center">
                     The Future of Task Automation
                 </p>

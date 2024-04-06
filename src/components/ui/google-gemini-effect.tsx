@@ -29,10 +29,10 @@ export const GoogleGeminiEffect = ({
         {/* {description || `sponsored by CISSA and Redbull`} */}
       </p>
       <div className="w-full h-[890px] -top-56 md:-top-36  flex items-center justify-center bg-red-transparent absolute ">
-        <button className="font-bold bg-white rounded-full md:px-5 md:py-3 px-3 py-2 md:mt-24 mt-8 z-30 md:text-base text-black text-xs  w-fit mx-auto ">
+        <button className="font-bold dark:bg-white bg-black rounded-full md:px-5 md:py-3 px-3 py-2 md:mt-24 mt-8 z-30 md:text-base dark:text-black text-xs  w-fit mx-auto ">
           <a
             href="/overview"
-            className="text-xl md:text-3xl font-extrabold pb-4 text-center bg-clip-text  bg-gradient-to-b from-neutral-100 to-neutral-300"
+            className="text-xl md:text-3xl font-extrabold pb-4 text-center bg-clip-text bg-gradient-to-b from-neutral-100 to-neutral-300"
           >
             About Us
           </a>
