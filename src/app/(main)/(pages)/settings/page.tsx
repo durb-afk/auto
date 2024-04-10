@@ -3,6 +3,7 @@ import React from 'react'
 import ProfilePicture from './_components/profile-picture'
 import { db } from '@/lib/db'
 import { currentUser } from '@clerk/nextjs'
+import Layout from '@/components/mlayout'
 
 type Props = {}
 
@@ -54,6 +55,7 @@ const Settings = async (props: Props) => {
   }
 
   return (
+    <Layout> 
     <div className="flex flex-col gap-4">
       <h1 className="sticky top-0 z-[10] flex items-center justify-between border-b bg-background/50 p-6 text-4xl backdrop-blur-lg">
         <span>Settings</span>
@@ -76,6 +78,8 @@ const Settings = async (props: Props) => {
         />
       </div>
     </div>
+  </Layout> 
+   
   )
 }
 

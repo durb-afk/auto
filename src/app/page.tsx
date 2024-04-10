@@ -26,11 +26,11 @@ export default function Home() {
       <section className="mt-[-500px]">
         <LampComponent />
         <div className="flex flex-wrap items-center justify-center flex-col md:flex-row gap-8 -mt-72">
-          <MeteorsDemo name="Chen" phone="4265363" email="gydeheduhi" linkedin="https://cissa.org.au/"/>
-          <MeteorsDemo name="Dhruv" phone="4265363" email="gydeheduhi" linkedin="https://cissa.org.au/"/>
-          <MeteorsDemo name="Sharan" phone="4265363" email="gydeheduhi" linkedin="https://cissa.org.au/"/>
-          <MeteorsDemo name="Ryan" phone="4265363" email="gydeheduhi" linkedin="https://cissa.org.au/"/>
-          <MeteorsDemo name="Simon" phone="4265363" email="gydeheduhi" linkedin="https://cissa.org.au/"/>
+          <MeteorsDemo name="Chen" phone="4265363" email="chma@student.unimelb.adu.au" linkedin="https://cissa.org.au/"/>
+          <MeteorsDemo name="Dhruv" phone="4265363" email="dhruvajayc@student.unimelb.edu.au" linkedin="https://cissa.org.au/"/>
+          <MeteorsDemo name="Sharan" phone="4265363" email="sharanvelambath6@gmail.com " linkedin="https://cissa.org.au/"/>
+          <MeteorsDemo name="Ryan" phone="4265363" email="jccai6@student.unimelb.edu.au" linkedin="https://cissa.org.au/"/>
+          <MeteorsDemo name="Simon" phone="4265363" email="mekhanika@gmail.com" linkedin="https://cissa.org.au/"/>
         </div>
       </section>
     </main>    
